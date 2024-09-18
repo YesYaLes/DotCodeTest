@@ -38,7 +38,6 @@ export default function App() {
 
   useEffect(() => {
     preSettingData();
-    // AsyncStorage.clear();
   });
   return (
     <Provider store={Store}>
