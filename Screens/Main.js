@@ -17,9 +17,8 @@ const Main = () => {
 
   const getUsersFromLocalStorage = async () => {
     const Users = JSON.parse(await AsyncStorage.getItem("Users"));
-    setTimeout(() => {
-      dispatch(setUsers(Users));
-    }, 1000);
+
+    dispatch(setUsers(Users));
   };
 
   useEffect(() => {
