@@ -7,6 +7,7 @@ import Main from "./Screens/Main";
 
 export default function App() {
   const preSettingData = async () => {
+    // AsyncStorage.clear();
     if (JSON.parse(await AsyncStorage.getItem("Users")) === null) {
       AsyncStorage.multiSet([
         [
@@ -39,6 +40,7 @@ export default function App() {
   useEffect(() => {
     preSettingData();
   });
+
   return (
     <Provider store={Store}>
       <Main />
